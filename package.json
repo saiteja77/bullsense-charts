@@ -1,0 +1,27 @@
+{
+  "name": "bullsense-charts",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:lib": "npm run build --workspace @bullsense/react-trade-charts",
+    "start:demo": "npm start --workspace react-trade-charts-demo",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.json",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-jsonc": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  // Prettier formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // ESLint fix on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // Lint TypeScript and JSX automatically
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "json"],
+
+  // Optional: control prettier behavior from VS Code
+  "prettier.requireConfig": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.printWidth": 100
+}
