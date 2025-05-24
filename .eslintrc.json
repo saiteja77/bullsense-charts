@@ -1,7 +1,7 @@
 {
   "root": true,
   "extends": ["react-app", "react-app/jest", "plugin:prettier/recommended"],
-  "plugins": ["@typescript-eslint", "prettier", "jsonc"],
+  "plugins": ["@typescript-eslint", "prettier", "jsonc", "unicorn"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -19,6 +19,24 @@
       "rules": {
         "jsonc/indent": ["error", 2],
         "jsonc/object-curly-spacing": ["error", "always"]
+      }
+    },
+    {
+      "files": ["*.test.ts", "*.test.tsx"],
+      "rules": {
+        "unicorn/filename-case": [
+          "error",
+          {
+            "case": "kebabCase",
+            "ignore": ["^[A-Z].*\\.test\\.tsx$"] // allow PascalCase.test.tsx
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.spec.tsx", "*.test.js", "*.tests.ts"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "error"
       }
     }
   ]
